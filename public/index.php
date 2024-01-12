@@ -2,12 +2,20 @@
 
 require_once "../vendor/autoload.php";
 
-// $views = '../src/views';
-// $cache = '../cache';
-// $blade = new Blade($views, $cache);
+use Jenssegers\Blade\Blade;
+
+$views = '../src/views';
+$cache = '../cache';
+$blade = new Blade($views, $cache);
+
 // Router system
+<<<<<<< HEAD
 $dotenv = Dotenv\Dotenv::createImmutable("../");
 $dotenv->load();
+=======
+$nameespace = "Dsw\\Ifriend\\";
+
+>>>>>>> plantilla
 $router = new AltoRouter();
 // List of routes
 require_once '../src/routers/router.php';
