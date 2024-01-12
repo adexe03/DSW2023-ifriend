@@ -1,0 +1,21 @@
+{
+    "name": "dsw/ifriend",
+    "description": "App para el juego del amigo invisible",
+    "type": "project",
+    "require": {
+        "illuminate/database": "^10.40",
+        "jenssegers/blade": "^2.0",
+        "altorouter/altorouter": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dsw\\Ifriend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adexe Reyes",
+            "email": "adexe.reyes.cb@gmail.com"
+        }
+    ]
+}
