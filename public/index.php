@@ -2,11 +2,20 @@
 
 require_once "../vendor/autoload.php";
 
-// $views = '../src/views';
-// $cache = '../cache';
-// $blade = new Blade($views, $cache);
+use Jenssegers\Blade\Blade;
+
+$views = '../src/views';
+$cache = '../cache';
+$blade = new Blade($views, $cache);
+
 // Router system
+<<<<<<< HEAD
+$dotenv = Dotenv\Dotenv::createImmutable("../");
+$dotenv->load();
+=======
 $nameespace = "Dsw\\Ifriend\\";
+
+>>>>>>> plantilla
 $router = new AltoRouter();
 // List of routes
 require_once '../src/routers/router.php';
@@ -17,7 +26,7 @@ if ($match) {
   $target = $match["target"];
   if (is_string($target) && strpos($target, "#") !== false) {
     list($controller, $action) = explode("#", $target);
-    $controller = $nameespace . "Controllers\\" . $controller;
+    $controller = $_ENV['NAMESPACE'] . "Controllers\\" . $controller;
     $controller = new $controller($router);
     $controller->$action($match["params"]);
   } else {
