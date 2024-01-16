@@ -22,7 +22,7 @@
       <td>{{$user->password}}</td>
       <td>{{$user->mail}}</td>
       <td>
-        <a class="btn btn-danger ">Borrar</a>
+        <a href="/user/{{$user->id}}/delete" class="btn btn-danger ">Borrar</a>
       </td>
     </tr>
     @endforeach
