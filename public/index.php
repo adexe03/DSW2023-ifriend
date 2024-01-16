@@ -9,13 +9,10 @@ $cache = '../cache';
 $blade = new Blade($views, $cache);
 
 // Router system
-<<<<<<< HEAD
 $dotenv = Dotenv\Dotenv::createImmutable("../");
 $dotenv->load();
-=======
-$nameespace = "Dsw\\Ifriend\\";
 
->>>>>>> plantilla
+$nameespace = "Dsw\\Ifriend\\";
 $router = new AltoRouter();
 // List of routes
 require_once '../src/routers/router.php';
