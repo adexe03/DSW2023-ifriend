@@ -24,7 +24,7 @@ if ($match) {
   if (is_string($target) && strpos($target, "#") !== false) {
     list($controller, $action) = explode("#", $target);
     $controller = $_ENV['NAMESPACE'] . "Controllers\\" . $controller;
-    $controller = new $controller($router);
+    $controller = new $controller($blade, $router);
     $controller->$action($match["params"]);
   } else {
     if (is_callable($match["target"]))

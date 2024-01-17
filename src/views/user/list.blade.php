@@ -22,10 +22,12 @@
       <td>{{$user->password}}</td>
       <td>{{$user->mail}}</td>
       <td>
-        <a href="/user/{{$user->id}}/delete" class="btn btn-danger ">Borrar</a>
+        <a href="{{$router->generate('user_delete', ['id'=>$user->id])}}" class="btn btn-danger ">Borrar</a>
       </td>
     </tr>
     @endforeach
   </tbody>
 </table>
+
+
 @endsection
